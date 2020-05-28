@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="h-100">
+    <head>
+        <title>My Webpage</title>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+        <link rel="stylesheet" href="/CSS/syle.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <style media="screen">
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400i,600,700,800&display=swap');
+        .container {
+          width: auto;
+          max-width: 680px;
+          padding: 0 15px;
+
+        }
+        .menu-container{
+          position: absolute;
+          top: 5%;
+          left: 80%;
+          transform: translate(-50%, -50%);
+          width: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .button{
+          position: relative;
+          background: #1b1b1b;
+          color: white;
+          font-size: 20px;
+          padding: 8px 20px;
+          width: 150px;
+          line-height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: width .4s;
+        }
+        .button.expand{
+          width: 100%;
+        }
+        .fas.expand:before{
+          content: '\f00d';
+        }
+        ul{
+          list-style: none;
+          position: absolute;
+          top: 65px;
+          display: block;
+          background: #1b1b1b;
+          width: 100%;
+          text-align: center;
+          border-radius: 5px;
+          display: none;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+        ul:before{
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 20px;
+          background: #1b1b1b;
+          top: -10px;
+          right: 15px;
+          transform: rotate(45deg);
+          z-index: -1;
+        }
+        ul li{
+          line-height: 35px;
+          padding: 8px 20px;
+          cursor: pointer;
+          border: 1px solid transparent;
+          border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+        ul li:last-child{
+          border-bottom: none;
+        }
+        ul li:hover{
+          box-shadow: inset 0 0 5px #33ffff,
+                      inset 0 0 10px #66ffff;
+        }
+        ul li:hover:first-child{
+          border-radius: 5px 5px 0 0;
+        }
+        ul li:hover:last-child{
+          border-radius: 0 0 5px 5px;
+        }
+        ul li a{
+          color: white;
+          font-size: 18px;
+          text-decoration: none;
+        }
+        ul li:hover a{
+          color: cyan;
+        }
+
+        .footer {
+          background-color: #f5f5f5;
+          position: fixed;
+          height: 60px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          line-height: 60px;
+          margin-bottom: 0px;
+          text-align: center;
+          padding-right: 35%;
+          padding-left: 35%;
+
+
+        }
+
+        .text-muted {
+          font-size: 15px;
+
+
+
+        }
+        *{
+          border: 0;
+          padding: 0;
+          margin: 0;
+        }
+
+
+          .div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: big john;
+            width: 100%;
+            height: 100vh;
+
+
+          }
+
+          h2{
+            font-size :60px;
+            background: #eee;
+            padding: 8px 24px;
+            border-radius: 16px;
+          }
+          .div:nth-child(2) {
+            background-image: url(https://www.arsenal.com/sites/default/files/wallpaper/WP_CFC_h_1920x1080%20%281%29.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+          }
+
+          .div:nth-child(3) {
+            background: white;
+          }
+          .div:nth-child(4) {
+            background-image: url(https://images.designtrends.com/wp-content/uploads/2016/03/30055714/Elegant-Art-of-Girl-Crazy-Background.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+
+          }
+
+          .div:nth-child(5) {
+            background: aquamarine;
+
+          }
+
+
+
+
+          table, th, td {
+            width: 60%;
+            margin: auto;
+            border:1px solid white;
+            border-collapse:collapse;
+            text-align: center;
+            font-size:14px;
+            table-layout: fixed;
+            background:red;
+            opacity: 0.5;
+            color:white;
+            margin-top:100px;
+          }
+          th, td{
+            padding: 20px;
+            opacity: 0.9;
+          }
+          p {
+            line-height: 2em;
+            vertical-align: -20px;
+          }
+
+
+}
+
+
+
+
+    </style>
+    </head>
+    <body class="d-flex flex-column h-100">
+      <div class="menu-container">
+        <div class="button">
+  Menu
+          <span class="fas fa-bars"></span>
+        </div>
+  <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/managers">Football Managers</a></li>
+  <li><a href="/players">Football Players</a></li>
+  <li><a href="/teams">Football Teams</a></li>
+  <li><a href="#">Feedback</a></li>
+  </ul>
+  </div>
+
+    <div class="div">
+      <h2>{% block heading1 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <div class="table1">
+
+        <table class="content-table">
+    <thead>
+      <tr>
+        <th>{% block th1 %} {% endblock %}</th>
+        <th>{% block th2 %} {% endblock %}</th>
+        <th>{% block th3 %} {% endblock %}</th>
+        <th>{% block th4 %} {% endblock %}</th>
+        <th>{% block th5 %} {% endblock %}</th>
+        <th>{% block th6 %} {% endblock %}</th>
+        <th>{% block th7 %} {% endblock %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{% block td1 %} {% endblock %}</td>
+        <td>{% block td2 %} {% endblock %}</td>
+        <td>{% block td3 %} {% endblock %}</td>
+        <td>{% block td4 %} {% endblock %}</td>
+        <td>{% block td5 %} {% endblock %}</td>
+        <td>{% block td6 %} {% endblock %}</td>
+        <td>{% block td7 %} {% endblock %}</td>
+        <td>{% block td8 %} {% endblock %}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Arsenal Football Club is a professional football club based in Islington, London, England, that plays in the Premier League, the top flight of English football. The club has won 13 League titles, a record 13 FA Cups, two League Cups, 15 FA Community Shields, the only League Centenary Trophy, one UEFA Cup Winners' Cup and one Inter-Cities Fairs Cup.
+
+Arsenal was the first club from the South of England to join The Football League, in 1893, and they reached the First Division in 1904. Relegated only once, in 1913, they continue the longest streak in the top division, and have won the second-most top-flight matches in English football history. In the 1930s, Arsenal won five League Championships and two FA Cups, and another FA Cup and two Championships after the war. In 1970–71, they won their first League and FA Cup Double. Between 1989 and 2005, they won five League titles and five FA Cups, including two more Doubles. They completed the 20th century with the highest average league position.</p>
+
+
+      </div>
+
+    </div>
+    <div class="div">
+      <h2>{% block heading3 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading4 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading5 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading6 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading7 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading8 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading9 %} {% endblock %}</h2>
+    </div>
+    <div class="div">
+      <h2>{% block heading10 %} {% endblock %}</h2>
+    </div>
+  <script>
+        $(document).ready(function(){
+          $('.button').click(function(){
+            if($(this).hasClass('expand')){
+              $('ul').slideUp(function(){
+                $('.button').removeClass('expand');
+                $('.fas').removeClass('expand')
+              });
+            }else{
+              $(this).addClass('expand');
+              setTimeout(function(){
+                $('.fas').addClass('expand');
+                $('ul').stop().slideDown();
+              },200);
+            }
+          });
+        });
+      </script>
+    </body>
+    <footer class="footer mt-auto py-3">
+    <div class="container text-center">
+      <span class="text-muted credit">Football | 2020</span>
+    </div>
+  </footer>
+
+</html>
