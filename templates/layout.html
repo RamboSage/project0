@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Football Home Page</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    </head>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="">Football</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="teams">Football teams<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="managers">Football Managers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="players">Football Players</a>
+          </li>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <body role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-1">Football Webpage!</h1>
+          <p>Welcome to the Football Webpage. Click the link below to go to the Home Page. Otherwise use the navigation bar to find your desired page.</p>
+          <p><a class="btn btn-primary btn-lg" href="/" role="button"> Home Page &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class ="first">{%  block heading1%}{% endblock %}</h2>
+            <table>
+            {%  block table%}{% endblock %}
+            </table>
+            {% block img %} {% endblock %}
+
+
+          </div>
+          <div class="col-md-4">
+            <h2 "second">{%  block heading2%} {% endblock %}</h2>
+            <p> </p>
+          </div>
+          <div class="col-md-4">
+            <h2 "third">{% block heading3%} {% endblock %}</h2>
+            <p></p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </body>
+
+    <footer class="container">
+      <p>&copy; Company 2017-2020</p>
+    </footer>
+
+
+    <!--<nav><a href="football_teams.html">
+      <p>Football Teams</p></a>
+    <a href="football_managers.html">
+      <p>Football Managers</p></a>
+    <a href="football_players.html">
+      <p>Football Players</p></a>
+    </nav> -->
+</html>
